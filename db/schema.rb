@@ -27,12 +27,13 @@ ActiveRecord::Schema.define(version: 3) do
     t.integer "price"
     t.string "image_url"
     t.string "size"
-    t.datetime "created"
-    t.datetime "updated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "haunted_houses", force: :cascade do |t|
     t.string "name"
+    t.string "description"
     t.string "location"
     t.integer "price"
     t.string "theme"
