@@ -31,4 +31,15 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at"
   end
 
+  create_table "haunted_houses", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "theme"
+    t.float "price"
+    t.boolean "family_friendly"
+    t.string "opening_date"
+    t.string "closing_date"
+    t.string "description"
+  end
+
 end
