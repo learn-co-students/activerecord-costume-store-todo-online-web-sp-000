@@ -1,5 +1,5 @@
 require "bundler/setup"
-
+require 'pry'
 require "sinatra/activerecord"
 require 'ostruct'
 require 'date'
