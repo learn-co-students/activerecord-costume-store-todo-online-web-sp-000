@@ -16,23 +16,3 @@ class CreateCostumes < ActiveRecord::Migration[5.2]
        t.string :image_url
   end
 end
-
-ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database => "db/halloween.sqlite"
-)
-sql = <<-SQL
-  CREATE TABLE IF NOT EXISTS costumes (
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-  price INTEGER,
-  size TEXT,
-  image_url TEXT
-  )
-SQL
- 
-ActiveRecord::Base.connection.execute(sql)
-end
-
-
-
