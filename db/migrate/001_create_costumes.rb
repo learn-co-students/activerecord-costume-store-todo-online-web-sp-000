@@ -7,3 +7,32 @@
 # Define a change method in which to do the migration
 # In this change method, create columns with the correct names and 
 # value types according to the spec
+class CreateCostumes < ActiveRecord::Migration[5.2]
+  def change
+    create_table :costumes do |t|
+       t.string :name
+       t.integer :price
+       t.string :size
+       t.string :image_url
+  end
+end
+
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/halloween.sqlite"
+)
+sql = <<-SQL
+  CREATE TABLE IF NOT EXISTS costumes (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  price INTEGER,
+  size TEXT,
+  image_url TEXT
+  )
+SQL
+ 
+ActiveRecord::Base.connection.execute(sql)
+end
+
+
+
