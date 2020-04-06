@@ -1,12 +1,12 @@
 # Create a class and inherit from ActiveRecord::Migration
-class CreateCostumes < ActiveRecord::Migration[5.1]
+class CreateCostumes < ActiveRecord::Migration[5.2]
   def change
    create_table :costumes do |t|
      t.string :name
      t.float :price
-     t.text :size
+     t.string :size
      t.string :image_url
-     t.timestamps
+     t.timestamps null: false
      #t.datetime :created_at
      #t.datetime :updated_at
    end
