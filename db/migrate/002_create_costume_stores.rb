@@ -5,7 +5,7 @@ class CreateCostumeStores < ActiveRecord::Migration[4.2]
       t.string :location
       t.string :costume_inventory
       t.integer :employees_count
-      # knows if its still in business or permanently closed
+      knows if its still in business or permanently closed
       # has an opening time
       # has a closing time
     end
