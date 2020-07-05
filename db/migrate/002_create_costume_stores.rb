@@ -1,13 +1,13 @@
-class CostumeStore < ActiveRecord::Migration[4.2]
+class CostumeStore < ActiveRecord::Migration
   def change
     create_table :costume_stores do |t|
       t.string :name
       t.string :location
-      t.integer :costume_inventory
-      t.integer :number_of_employees
-
-      t.timestamps
-
+      t.string :costume_inventory
+      t.integer :employees_count
+      # knows if its still in business or permanently closed
+      # has an opening time
+      # has a closing time
     end
   end
 end
