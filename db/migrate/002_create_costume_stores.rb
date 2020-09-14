@@ -1,1 +1,1 @@
-# Create your costume_stores migration here
+# Create your costume_stores migration her
