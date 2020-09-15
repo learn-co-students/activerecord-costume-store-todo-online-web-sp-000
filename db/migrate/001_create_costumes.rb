@@ -11,10 +11,10 @@
 class CreateCostumes < ActiveRecord::Migration[5.2]
     def change
         create_table :costumes do |c|
-            c.string :name
+            c.text :name
             c.float :price
             c.text :image_url
-            c.text :size
+            c.string :size
             c.timestamps 
         end
     end
