@@ -49,7 +49,7 @@ describe "CostumeStore" do
   end
 
   it "has an opening time" do
-    start_time = "2021-01-20 22:00:00 -0600"
+    start_time = get_opening_time
     creative = CostumeStore.create(
       name: "Creative Costume Co", 
       opening_time: start_time 
@@ -58,7 +58,7 @@ describe "CostumeStore" do
   end
 
   it "has a closing time" do
-    end_time = "2021-01-20 09:00:00 -0600"
+    end_time = get_closing_time
     ny_costumes = CostumeStore.create(
       name: "New York Costumes", 
       closing_time: end_time 
