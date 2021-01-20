@@ -2,7 +2,7 @@
 class CreateCostumeStores < ActiveRecord::Migration[5.2]
 
     def change 
-        create_table costume_store do |c|
+        create_table :costume_store do |c|
         c.datetime :opening_time
         c.string :name
         c.string :location
